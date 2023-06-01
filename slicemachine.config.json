@@ -1,5 +1,0 @@
-{
-  "repositoryName": "nbportfolio",
-  "adapter": "@slicemachine/adapter-next",
-  "libraries": ["./slices"]
-}
