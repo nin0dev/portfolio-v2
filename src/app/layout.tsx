@@ -1,10 +1,4 @@
 import '../styles/globals.css'
-import { Sora } from 'next/font/google'
-
-const sora = Sora({
-  weight: '400',
-  preload: false,
-})
 
 export const metadata = {
   title: 'Nino Berber | Portfolio',
@@ -18,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-white text-black dark:bg-lightDark dark:text-white">
+      <body className="bg-white font-['Sora'] text-black dark:bg-lightDark dark:text-white">
         {children}
       </body>
     </html>

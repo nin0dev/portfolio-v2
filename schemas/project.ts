@@ -4,17 +4,19 @@ export default {
     type: 'document',
     fields: [
       {
-        name: 'fullName',
-        title: 'Full name',
+        name: 'projectName',
+        title: 'Project Name',
         type: 'string',
       },
       {
-        name: 'portrait',
-        title: 'Portrait',
+        name: 'projectThumbnail',
+        title: 'Project Thumbnail',
         type: 'image',
-        options: {
-          hotspot: true,
-        }
+      },
+      {
+        name: 'projectDescription',
+        title: 'Project Description',
+        type: 'text',
       }
     ]
   }

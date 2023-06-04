@@ -6,6 +6,9 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      sans: ["Sora", "sans-serif"],
+    },
     extend: {
       colors: {
         'lightDark': '#161616',
