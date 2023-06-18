@@ -1,11 +1,11 @@
 import {defineConfig} from 'sanity'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
-import {schemaTypes} from './schemas'
+import schemaTypes from './sanity/schemas'
 
-export default defineConfig({
+const config = defineConfig({
   name: 'default',
-  title: 'portfolio-v2',
+  title: 'Portfolio | Nino Berber',
 
   projectId: 'iqpdtrr9',
   dataset: 'production',
@@ -16,3 +16,5 @@ export default defineConfig({
     types: schemaTypes,
   },
 })
+
+export default config;

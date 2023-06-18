@@ -1,14 +1,12 @@
 "use client";
 import Header from '../components/header'
-import { useEffect } from 'react'
-
-import { motion } from 'framer-motion'
+import Projects from '@/components/projects';
 
 export default function Home() {
 
   return (
     <>
-      <main className="min-h-screen">
+      <main className="mb-20">
         <div>
           <h2 className="text-3xl">Hello 👋</h2>
           <br/>
@@ -24,6 +22,7 @@ export default function Home() {
           </a>
         </div>
       </main>
+      <Projects />
       <Header />
     </>
   )
