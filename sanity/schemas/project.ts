@@ -1,6 +1,6 @@
 export default {
-    name: 'projects',
-    title: 'Projects',
+    name: 'project',
+    title: 'Project',
     type: 'document',
     fields: [
       {
@@ -27,6 +27,11 @@ export default {
         name: 'slug',
         title: 'Slug',
         type: 'slug',
+      },
+      {
+        name: 'projectLink',
+        title: 'Project Link',
+        type: 'url',
       }
     ]
   }

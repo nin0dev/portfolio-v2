@@ -6,4 +6,5 @@ export type Project = {
     projectThumbnail: string;
     projectDescription: PortableTextBlock[];
     slug: string;
+    projectLink: string | undefined;
 }

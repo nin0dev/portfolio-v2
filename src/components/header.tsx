@@ -13,7 +13,7 @@ export default function Header() {
     const [ colorMode, setColorMode ] = useColorMode()
 
     return (
-        <header className="bg-white bottom-0 right-0 left-0 flex fixed justify-around py-5">
+        <header className="bg-white bottom-0 right-0 left-0 flex fixed justify-around py-5 z-50">
             <a href="/">
                 <img className="h-5" src="/images/logo-light.png" alt="Logo" />
             </a>
