@@ -1,10 +1,13 @@
 'use client';
+import Header from '@/components/header';
+import '../styles/globals.css';
+import About from '@/components/about';
 
 export default function Home() {
   return (
     <>
-      <main className="mb-20">
-        <div>
+      <main>
+        <div className="mb-20">
           <h2 className="text-3xl">Hello 👋</h2>
           <br />
           <h3 className="text-xl">
@@ -29,6 +32,9 @@ export default function Home() {
             Say hello back!
           </a>
         </div>
+
+        <About />
+        <Header />
       </main>
     </>
   );
