@@ -1,20 +1,20 @@
+import Header from '@/components/header';
 import React from 'react';
 
-export const metadata = {
-  title: 'Nino Berber | Portfolio',
-  description:
-    'French & Canadian based in Bordeaux, France. I am a Web enthusiast, specializing in development.',
-};
+import { usePathname } from 'next/navigation';
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  // const pathname = usePathname();
   return (
-    <html className="dark" lang="en">
-      <body className="mb-20 pt-8 mx-5 lg:px-40 bg-white font-['Sora'] text-black dark:bg-lightDark dark:text-white">
+    <html lang="en">
+      <body className="mb-20 pt-8 mx-5 lg:px-40 bg-white font-sora text-black">
         {children}
+        {/* {pathname == '/legal-mentions' ? null : <Footer />} */}
+        <Header />
       </body>
     </html>
   );
