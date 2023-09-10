@@ -1,6 +1,7 @@
 'use client';
 
 import Head from 'next/head';
+import Link from 'next/link';
 
 import Header from '@/components/header';
 import '../styles/globals.css';
@@ -76,7 +77,7 @@ I am a Web enthusiast, specializing in development. Check out my projects and co
             enthusiast, specializing in development.
           </h3>
           <br />
-          <a href="/contact" className="hover:underline">
+          <Link href="/contact" className="hover:underline">
             <svg
               className="inline mr-2"
               width="35"
@@ -91,7 +92,7 @@ I am a Web enthusiast, specializing in development. Check out my projects and co
               />
             </svg>
             Say hello back!
-          </a>
+          </Link>
         </div>
 
         <About />
