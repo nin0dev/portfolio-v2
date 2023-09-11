@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function About() {
@@ -8,10 +9,12 @@ export default function About() {
       <div className="mb-5" id="about">
         <h3 className="text-2xl mb-5">About</h3>
         <div className="md:flex gap-6">
-          <img
+          <Image
             className="rounded h-auto w-1/2 mb-4 md:w-1/3"
-            src="./images/profile.jpg"
+            src="/images/profile.jpg"
             alt="Profile picture"
+            width={500}
+            height={500}
           />
           <div>
             <p>
