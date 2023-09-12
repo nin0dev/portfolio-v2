@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <div>
       <h1 className="text-2xl mb-5">Page Not Found</h1>
-      <p className="mb-3">The page you"re looking for does not exist.</p>
+      <p className="mb-3">The page you&apos;re looking for does not exist.</p>
       <Link href="/" className="hover:underline">
         Return to homepage
         <svg
