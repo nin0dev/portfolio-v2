@@ -3,7 +3,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
-import Header from '@/components/header';
 import '../styles/globals.css';
 import About from '@/components/about';
 import Footer from '@/components/footer';
@@ -12,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfolio - Nino Berber</title>
+        <title>Nino Berber — Portfolio</title>
 
         <meta charSet="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
