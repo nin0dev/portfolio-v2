@@ -4,7 +4,9 @@ import { useState } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -12,7 +14,13 @@ export default function Header() {
   return (
     <nav className="bg-[hsla(0,100%,100%,.9)] backdrop-blur-sm	border-y border-[#eaeaea] bottom-0 right-0 left-0 flex fixed justify-between py-5 px-5 z-50 lg:justify-between">
       <Link href="/">
-        <img className="h-5 w-auto" src="/images/logo-light.png" alt="Logo" />
+        <Image
+          className="h-5 w-auto"
+          src="/images/logo-light.png"
+          alt="Logo"
+          width={50}
+          height={35}
+        />
       </Link>
 
       <button
