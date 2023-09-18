@@ -12,7 +12,7 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
-      - { label: Brouillon, name: draft, widget: 'boolean', default: false }
+      - { label: Draft, name: draft, widget: 'boolean', default: false }
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
       - {
