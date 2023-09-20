@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: github
   repo: nin0dev/portfolio-v2
   branch: main # Branch to update (optional; defaults to master)
 media_folder: 'public/uploads' # Media files will be stored in the repo under static/images/uploads
@@ -9,20 +9,62 @@ publish_mode: editorial_workflow
 collections:
   - name: projects
     label: Projects
+    label_singular: Project
     folder: 'content/projects'
     create: true
+    filter: { field: 'language', value: 'en' }
     slug: '{{slug}}'
     fields:
-      - { label: Draft, name: draft, widget: 'boolean', default: false }
-      - { label: Title, name: title, widget: string }
-      - { label: Body, name: body, widget: markdown }
+      - {
+          label: Draft,
+          name: draft,
+          widget: 'boolean',
+          value_field: '{{slug}}',
+          search_fields: ['name'],
+          default: false,
+        }
+      - {
+          label: Title,
+          name: title,
+          widget: string,
+          value_field: '{{slug}}',
+          search_fields: ['name'],
+        }
+      - {
+          label: Body,
+          name: body,
+          widget: markdown,
+          value_field: '{{slug}}',
+          search_fields: ['name'],
+        }
       - {
           label: Technologies,
           name: technos,
           widget: relation,
           collection: technos,
+          value_field: '{{slug}}',
+          search_fields: ['name'],
           multiple: true,
         }
       - { label: Image, name: image, widget: image }
-      - { label: Date, name: date, widget: datetime }
       - { label: Tags, name: tags, widget: list }
+      - { label: Github link, name: github_url, required: false }
+      - { label: Projet link, name: project_url, required: false }
+
+  - name: technos
+    label: Technologies
+    label_singular: Technologie
+    folder: content/technos
+    create: true
+    editor: { preview: false }
+    filter: { field: 'visibleInCms', value: true }
+    fields:
+      - {
+          label: 'Visible',
+          name: 'visibleInCms',
+          widget: hidden,
+          default: true,
+        }
+      - { label: Brouillon, name: draft, widget: 'boolean', default: false }
+      - { label: Techno, name: techno }
+      - { label: Image url, name: img }
