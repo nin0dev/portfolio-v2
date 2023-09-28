@@ -6,6 +6,7 @@ import Link from 'next/link';
 import '../styles/globals.css';
 import About from '@/components/about';
 import Footer from '@/components/footer';
+import Projects from '@/components/projects';
 
 export default function Home() {
   return (
@@ -93,7 +94,7 @@ I am a Web enthusiast, specializing in development. Check out my projects and co
             Say hello back!
           </Link>
         </div>
-
+        <Projects />
         <About />
         <Footer />
       </main>

@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function About() {
   return (
     <>
-      <div className="mb-5" id="about">
+      <section className="mb-5" id="about">
         <h3 className="text-2xl mb-5">About</h3>
         <div className="md:flex gap-6">
           <Image
@@ -38,7 +38,7 @@ export default function About() {
             </p>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

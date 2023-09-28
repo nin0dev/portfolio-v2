@@ -1,0 +1,14 @@
+projects:
+  - name: 'password-generator'
+    draft: false
+    title: 'Project 1'
+    body: 'Project 1 body'
+    technos:
+      - 'techno-1'
+      - 'techno-2'
+    image: '/img/project-1.png'
+    tags:
+      - 'tag-1'
+      - 'tag-2'
+    github_url: 'https://github.com'
+    project_url: 'https://project.com'
