@@ -29,7 +29,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div key={index}>
               <div className="p-5 relative shadow-lg rounded overflow-hidden hover:scale-105 transition-transform">
-                <Image src={project.image} width={500} height={50} alt={project.title} className='mb-5' />
+                <Image src={project.image} width={500} height={50} alt={project.title} className='mb-5 rounded' />
                 <h4 className="text-xl mb-2">{project.title}</h4>
                 <p className="pb-5 text-xs">{project.description}</p>
                 <a href={project.linkGit} target="_blank" className="mb-2">Check on Github</a>
