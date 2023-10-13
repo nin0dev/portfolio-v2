@@ -7,6 +7,7 @@ import '../styles/globals.css';
 import About from '@/components/about';
 import Footer from '@/components/footer';
 import Projects from '@/components/projects';
+import MarkdownReader from '@/components/mdreader.jsx';
 
 export default function Home() {
   return (
