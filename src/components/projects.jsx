@@ -12,6 +12,7 @@ const projects = [{
   title: 'Midjourney blog',
   description: "During my first year of MMI Bordeaux, an other student and I had to create a blog using Ruby On Rails. Through the development process, I understood the basics of a CLUD application, and how to use the MVC pattern.",
   image: '/uploads/rails_blog_thumb1.png',
+  link: 'https://midjourney-on-rails.osc-fr1.scalingo.io/',
   linkGit: 'https://github.com/nin0dev/Midjourney-on-rails',
 }, { 
   title: 'Museum website rework',
