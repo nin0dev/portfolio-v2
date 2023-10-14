@@ -1,13 +1,10 @@
-'use client';
+"use client";
 
-import Head from 'next/head';
-import Link from 'next/link';
-
-import '../styles/globals.css';
-import About from '@/components/about';
-import Footer from '@/components/footer';
-import Projects from '@/components/projects';
-import MarkdownReader from '@/components/mdreader.jsx';
+import About from "@/components/about";
+import Footer from "@/components/footer";
+import Projects from "@/components/projects";
+import Link from "next/link";
+import "../styles/globals.css";
 
 export default function Home() {
   return (
