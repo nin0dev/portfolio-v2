@@ -1,69 +1,55 @@
+local_backend: true
 backend:
-  name: github
-  repo: nin0dev/portfolio-v2
+  name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
-media_folder: 'public/uploads' # Media files will be stored in the repo under static/images/uploads
-public_folder: '/uploads' # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "public/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/uploads" # The src attribute for uploaded media will begin with /images/uploads
+slug:
+  encoding: ascii
+  clean_accents: true
 
 collections:
-  - name: projects
-    label: Projects
-    label_singular: Project
-    folder: 'content/projects'
-    create: true
-    filter: { field: 'language', value: 'en' }
-    slug: '{{slug}}'
-    fields:
-      - {
-          label: Draft,
-          name: draft,
-          widget: 'boolean',
-          value_field: '{{slug}}',
-          search_fields: ['name'],
-          default: false,
-        }
-      - {
-          label: Title,
-          name: title,
-          widget: string,
-          value_field: '{{slug}}',
-          search_fields: ['name'],
-        }
-      - {
-          label: Body,
-          name: body,
-          widget: markdown,
-          value_field: '{{slug}}',
-          search_fields: ['name'],
-        }
-      - {
-          label: Technologies,
-          name: technos,
-          widget: relation,
-          collection: technos,
-          value_field: '{{slug}}',
-          search_fields: ['name'],
-          multiple: true,
-        }
-      - { label: Image, name: image, widget: image }
-      - { label: Tags, name: tags, widget: list }
-      - { label: Github link, name: github_url, required: false }
-      - { label: Projet link, name: project_url, required: false }
+  - name: content
+    label: Contenu
+    editor: { preview: false }
+    files:
+      - name: projects
+        label: Projets
+        file: src/content/projects.yml
+        fields:
+          - label: Projets
+            name: projects
+            widget: list
+            summary: "{{title}}"
+            fields:
+              - label: Brouillon
+                name: draft
+                widget: boolean
+                default: false
+              - label: Titre
+                name: title
+                widget: string
+              - label: Description
+                name: description
+                widget: text
+              - label: Lien
+                name: link
+                widget: string
+              - label: Lien git
+                name: linkGit
+                widget: string
+              - label: Image
+                name: image
+                widget: image
 
   - name: technos
-    label: Technologies
-    label_singular: Technology
-    folder: content/technos
+    label: Technos
+    label_singular: Techno
+    folder: src/content/technos
+    identifier_field: name
     create: true
     editor: { preview: false }
-    filter: { field: 'visibleInCms', value: true }
     fields:
-      - {
-          label: 'Visible',
-          name: 'visibleInCms',
-          widget: hidden,
-          default: true,
-        }
-      - { label: Brouillon, name: draft, widget: 'boolean', default: false }
-      - { label: Techno, name: techno }
-      - { label: Image url, name: img }
+      - { label: Brouillon, name: draft, widget: "boolean", default: false }
+      - { label: Titre, name: title }
+      - { label: Url icône, name: icon }
