@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import About from "@/components/about";
-import Footer from "@/components/footer";
-import Projects from "@/components/projects";
-import Link from "next/link";
-import "../styles/globals.css";
+import About from '@/components/about';
+import Footer from '@/components/footer';
+import Projects from '@/components/projects';
+import Link from 'next/link';
+import '../styles/globals.css';
 
 export default function Home() {
   return (
@@ -73,7 +73,7 @@ I am a Web enthusiast, specializing in development. Check out my projects and co
             enthusiast, specializing in development.
           </h3>
           <br />
-          <Link href="#contact" className="hover:underline">
+          <Link href="/#contact" className="hover:underline">
             <svg
               className="inline mr-2"
               width="35"
