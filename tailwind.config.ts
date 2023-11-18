@@ -16,6 +16,9 @@ const config: Config = {
       fontFamily: {
         "sora": ["Sora"]
       },
+      colors: {
+        "white": "#F8F8F8",
+      },
     },
   },
   plugins: [],
