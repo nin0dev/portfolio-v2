@@ -3,7 +3,7 @@ import { projects } from "../content/projects.yml";
 
 export default function Projects() {
   return (
-    <section className="mb-10" id="about">
+    <section className="mb-10" id="projects">
       <h3 className="text-2xl mb-5">Projects</h3>
       <div className="mt-5 grid grid-cols-1 grid-rows-1 sm:grid-cols-2 gap-5 lg:grid-cols-3 2xl:grid-cols-4">
         {projects.map((project, index) => (
