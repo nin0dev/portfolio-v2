@@ -41,13 +41,19 @@ export default function Header() {
           <Link href="/">Home</Link>
         </li>
         <li className="px-5 font-normal">
-          <Link href="/#projects">Projects</Link>
+          <Link href="#projects" scroll={false}>
+            Projects
+          </Link>
         </li>
         <li className="px-5 font-normal">
-          <Link href="/#about">About</Link>
+          <Link href="#about" scroll={false}>
+            About
+          </Link>
         </li>
         <li className="px-5 font-normal">
-          <Link href="/#contact">Contact</Link>
+          <Link href="#contact" scroll={false}>
+            Contact
+          </Link>
         </li>
       </ul>
 
