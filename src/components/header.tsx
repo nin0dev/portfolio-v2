@@ -48,7 +48,7 @@ export default function Header() {
           </Link>
         </li>
         <li>
-          <Link href="/images/CV_Nino_Berber.pdf" rel="nofollow">
+          <Link href="/images/CV_BERBER_Nino_Alternance.pdf" rel="nofollow">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="1.2em"
