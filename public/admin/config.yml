@@ -10,32 +10,22 @@ slug:
 
 collections:
   - name: introText
-    label: Textes d'introduction
-    label_singular: Texte d'introduction
+    label: Texte d'introduction
     folder: src/content/intro
-    identifier_field: name
     create: true
     editor: { preview: false }
     fields:
-      - label: Brouillon
-        name: draft
-        widget: boolean
-        default: false
-      - label: Titre principal
-        name: mainTitle
-        widget: string
-      - label: Titre secondaire
-        name: subtitle
-        widget: subtitle
-      - label: Call-To-Action
-        name: cta
-        widget: string
+      - { label: 'Titre principal', name: 'mainTitle', widget: 'string' }
+      - { label: 'Titre secondaire', name: 'subtitle', widget: 'string' }
+      - { label: 'Call-To-Action', name: 'cta', widget: 'string' }
 
   - name: projects
     label: Projets
     files: src/content/projects.yml
+    create: true
+    editor: { preview: false }
     fields:
-      - label: Projets
+     - label: Projets
         name: projects
         widget: list
         summary: '{{title}}'
@@ -58,16 +48,16 @@ collections:
             widget: string
           - label: Image
             name: image
-            widget: image
+            widget: image      
 
-  - name: technos
-    label: Technos
-    label_singular: Techno
-    folder: src/content/technos
-    identifier_field: name
-    create: true
-    editor: { preview: false }
-    fields:
-      - { label: Brouillon, name: draft, widget: 'boolean', default: false }
-      - { label: Titre, name: title }
-      - { label: Url icône, name: icon }
+  # - name: technos
+  #   label: Technos
+  #   label_singular: Techno
+  #   folder: src/content/technos
+  #   identifier_field: name
+  #   create: true
+  #   editor: { preview: false }
+  #   fields:
+  #     - { label: Brouillon, name: draft, widget: 'boolean', default: false }
+  #     - { label: Titre, name: title }
+  #     - { label: Url icône, name: icon }
