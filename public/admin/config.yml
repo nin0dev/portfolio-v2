@@ -21,7 +21,7 @@ collections:
 
   - name: projects
     label: Projets
-    files: src/content/projects.yml
+    file: src/content/projects.yml
     create: true
     editor: { preview: false }
     fields:
