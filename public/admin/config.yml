@@ -10,26 +10,26 @@ slug:
 
 collections:
   - name: introText
-      label: Texte d'introduction
-      label_singular: Intro
-      folder: src/content/intro
-      identifier_field: name
-      create: true
-      editor: { preview: false }
-      fields:
-        - label: Brouillon
-          name: draft
-          widget: boolean
-          default: false
-        - label: Titre principal
-          name: mainTitle
-          widget: string
-        - label: Titre secondaire
-          name: subtitle
-          widget: subtitle
-        - label: Call-To-Action
-          name: cta
-          widget: string
+    label: Texte d'introduction
+    label_singular: Intro
+    folder: src/content/intro
+    identifier_field: name
+    create: true
+    editor: { preview: false }
+    fields:
+      - label: Brouillon
+        name: draft
+        widget: boolean
+        default: false
+      - label: Titre principal
+        name: mainTitle
+        widget: string
+      - label: Titre secondaire
+        name: subtitle
+        widget: subtitle
+      - label: Call-To-Action
+        name: cta
+        widget: string
 
   - name: projects
     label: Projets
