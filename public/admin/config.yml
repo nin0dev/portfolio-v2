@@ -9,19 +9,9 @@ slug:
   clean_accents: true
 
 collections:
-  - name: introText
-    label: Texte d'introduction
-    folder: src/content/intro
-    create: true
-    editor: { preview: false }
-    fields:
-      - { label: 'Titre principal', name: 'mainTitle', widget: 'string' }
-      - { label: 'Titre secondaire', name: 'subtitle', widget: 'string' }
-      - { label: 'Call-To-Action', name: 'cta', widget: 'string' }
-
   - name: projects
     label: Projets
-    folder: src/content
+    folder: src/content/projects/projects.yml
     create: true
     editor: { preview: false }
     fields:
@@ -45,6 +35,28 @@ collections:
             widget: string
           - label: Lien git
             name: linkGit
+            widget: string
+          - label: Image
+            name: image
+            widget: image
+
+  - name: Tools
+    label: Outils
+    folder: src/content/tools
+    create: true
+    editor: { preview: false }
+    fields:
+      - label: Outils
+        name: tools
+        widget: list
+        summary: '{{title}}'
+        fields:
+          - label: Brouillon
+            name: draft
+            widget: boolean
+            default: false
+          - label: Nom
+            name: name
             widget: string
           - label: Image
             name: image
