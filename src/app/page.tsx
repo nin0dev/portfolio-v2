@@ -69,7 +69,7 @@ I am a Web enthusiast, specializing in development. Check out my projects and co
           <h2 className="text-3xl">Hello 👋</h2>
           <br />
           <h3 className="text-xl">
-            French & Canadian based in Bordeaux, France. <br /> I am a Web
+            French & Canadian based in Versailles, France. <br /> I am a Web
             enthusiast, specializing in development.
           </h3>
           <br />

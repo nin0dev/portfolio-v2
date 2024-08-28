@@ -2,8 +2,8 @@ local_backend: true
 backend:
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
-media_folder: "public/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: 'public/uploads' # Media files will be stored in the repo under static/images/uploads
+public_folder: '/uploads' # The src attribute for uploaded media will begin with /images/uploads
 slug:
   encoding: ascii
   clean_accents: true
@@ -13,6 +13,28 @@ collections:
     label: Contenu
     editor: { preview: false }
     files:
+      - name: introText
+        label: Texte d'introduction
+        label_singular: Intro
+        folder: src/content/intro
+        identifier_field: name
+        create: true
+        editor: { preview: false }
+        fields:
+          - label: Brouillon
+                name: draft
+                widget: boolean
+                default: false
+              - label: Titre principal
+                name: mainTitle
+                widget: string
+              - label: Titre secondaire
+                name: subtitle
+                widget: subtitle
+              - label: Call-To-Action
+                name: cta
+                widget: string
+
       - name: projects
         label: Projets
         file: src/content/projects.yml
@@ -20,7 +42,7 @@ collections:
           - label: Projets
             name: projects
             widget: list
-            summary: "{{title}}"
+            summary: '{{title}}'
             fields:
               - label: Brouillon
                 name: draft
@@ -50,6 +72,6 @@ collections:
     create: true
     editor: { preview: false }
     fields:
-      - { label: Brouillon, name: draft, widget: "boolean", default: false }
+      - { label: Brouillon, name: draft, widget: 'boolean', default: false }
       - { label: Titre, name: title }
       - { label: Url icône, name: icon }
