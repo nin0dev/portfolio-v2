@@ -11,7 +11,7 @@ slug:
 collections:
   - name: introText
     label: Texte d'introduction
-    file: src/content/intro
+    folder: src/content/intro
     create: true
     editor: { preview: false }
     fields:
@@ -21,7 +21,7 @@ collections:
 
   - name: projects
     label: Projets
-    file: src/content/projects.yml
+    folder: src/content
     create: true
     editor: { preview: false }
     fields:
