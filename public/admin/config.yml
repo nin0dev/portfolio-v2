@@ -11,7 +11,7 @@ slug:
 collections:
   - name: introText
     label: Texte d'introduction
-    folder: src/content/intro
+    file: src/content/intro
     create: true
     editor: { preview: false }
     fields:
