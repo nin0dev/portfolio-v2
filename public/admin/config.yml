@@ -9,60 +9,56 @@ slug:
   clean_accents: true
 
 collections:
-  - name: content
-    label: Contenu
-    editor: { preview: false }
-    files:
-      - name: introText
-        label: Texte d'introduction
-        label_singular: Intro
-        folder: src/content/intro
-        identifier_field: name
-        create: true
-        editor: { preview: false }
+  - name: introText
+      label: Texte d'introduction
+      label_singular: Intro
+      folder: src/content/intro
+      identifier_field: name
+      create: true
+      editor: { preview: false }
+      fields:
+        - label: Brouillon
+          name: draft
+          widget: boolean
+          default: false
+        - label: Titre principal
+          name: mainTitle
+          widget: string
+        - label: Titre secondaire
+          name: subtitle
+          widget: subtitle
+        - label: Call-To-Action
+          name: cta
+          widget: string
+
+  - name: projects
+    label: Projets
+    file: src/content/projects.yml
+    fields:
+      - label: Projets
+        name: projects
+        widget: list
+        summary: '{{title}}'
         fields:
           - label: Brouillon
             name: draft
             widget: boolean
             default: false
-          - label: Titre principal
-            name: mainTitle
+          - label: Titre
+            name: title
             widget: string
-          - label: Titre secondaire
-            name: subtitle
-            widget: subtitle
-          - label: Call-To-Action
-            name: cta
+          - label: Description
+            name: description
+            widget: text
+          - label: Lien
+            name: link
             widget: string
-
-      - name: projects
-        label: Projets
-        file: src/content/projects.yml
-        fields:
-          - label: Projets
-            name: projects
-            widget: list
-            summary: '{{title}}'
-            fields:
-              - label: Brouillon
-                name: draft
-                widget: boolean
-                default: false
-              - label: Titre
-                name: title
-                widget: string
-              - label: Description
-                name: description
-                widget: text
-              - label: Lien
-                name: link
-                widget: string
-              - label: Lien git
-                name: linkGit
-                widget: string
-              - label: Image
-                name: image
-                widget: image
+          - label: Lien git
+            name: linkGit
+            widget: string
+          - label: Image
+            name: image
+            widget: image
 
   - name: technos
     label: Technos
