@@ -22,18 +22,18 @@ collections:
         editor: { preview: false }
         fields:
           - label: Brouillon
-                name: draft
-                widget: boolean
-                default: false
-              - label: Titre principal
-                name: mainTitle
-                widget: string
-              - label: Titre secondaire
-                name: subtitle
-                widget: subtitle
-              - label: Call-To-Action
-                name: cta
-                widget: string
+            name: draft
+            widget: boolean
+            default: false
+          - label: Titre principal
+            name: mainTitle
+            widget: string
+          - label: Titre secondaire
+            name: subtitle
+            widget: subtitle
+          - label: Call-To-Action
+            name: cta
+            widget: string
 
       - name: projects
         label: Projets
