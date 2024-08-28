@@ -10,8 +10,8 @@ slug:
 
 collections:
   - name: introText
-    label: Texte d'introduction
-    label_singular: Intro
+    label: Textes d'introduction
+    label_singular: Texte d'introduction
     folder: src/content/intro
     identifier_field: name
     create: true
@@ -33,7 +33,7 @@ collections:
 
   - name: projects
     label: Projets
-    file: src/content/projects.yml
+    files: src/content/projects.yml
     fields:
       - label: Projets
         name: projects
