@@ -11,7 +11,7 @@ export default function Footer() {
         <Link href="https://www.linkedin.com/in/nino-berber">Linkedin</Link>
       </p>
       <p className="text-gray-400 text-sm hover:underline">
-        <Link href="https://www.github.com/nin0dev">GitHub</Link>
+        <Link href="https://www.github.com/nin0dev">Github</Link>
       </p>
       <p className="text-gray-400 text-sm hover:underline">
         <Link href="/legal-mentions">Legal Mentions</Link>

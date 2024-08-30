@@ -3,6 +3,7 @@
 import About from '@/components/about';
 import Footer from '@/components/footer';
 import Projects from '@/components/projects';
+import Tools from '@/components/tools';
 import Link from 'next/link';
 import '../styles/globals.css';
 
@@ -91,6 +92,7 @@ I am a Web enthusiast, specializing in development. Check out my projects and co
           </Link>
         </div>
         <Projects />
+        <Tools />
         <About />
         <Footer />
       </main>
