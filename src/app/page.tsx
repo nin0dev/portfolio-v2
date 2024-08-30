@@ -12,6 +12,12 @@ export default function Home() {
     <>
       <title>Nino Berber — Portfolio</title>
 
+      {/* Google Search Console verification */}
+      <meta
+        name="google-site-verification"
+        content="bzVBtsBADpzJb8Tl9M8U5Cnusa_SuCRwqh3YqG9wOIc"
+      />
+
       <meta charSet="utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
