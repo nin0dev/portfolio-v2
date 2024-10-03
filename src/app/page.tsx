@@ -35,7 +35,7 @@ export default function Home() {
       <meta name="subject" content="undefined" />
       <meta
         name="description"
-        content="French & Canadian based in Bordeaux, France.
+        content="French & Canadian based in Versailles, France.
 I am a Web enthusiast, specializing in development. Check out my projects and contact me."
       />
 
