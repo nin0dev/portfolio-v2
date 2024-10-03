@@ -1,12 +1,20 @@
+import Script from "next/script";
 import Image from "next/image";
-import { projects } from "../content/projects";
+import { getMarkup } from "@/libs/utils";
 
 export default function Projects() {
+  const passProj = getMarkup("src/content/projects", "pass-gen.md");
+
+  if (!passProj) {
+    return null;
+  }
+
+  const { data } = passProj;
   return (
     <section className="mb-10" id="projects">
       <h3 className="text-2xl mb-5">Projects</h3>
       <div className="mt-5 grid grid-cols-1 grid-rows-1 sm:grid-cols-2 gap-5 lg:grid-cols-3 2xl:grid-cols-4">
-        {projects.map((project, index) => (
+        {data.map((project, index) => (
           <div key={index} className="h-auto">
             <div className="p-5 relative shadow-lg rounded overflow-hidden hover:scale-105 transition-transform h-full">
               <Image
