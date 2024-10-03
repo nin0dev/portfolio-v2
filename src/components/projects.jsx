@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { projects } from "../content/projects/projects.yml";
+import { projects } from "../content/projects";
 
 export default function Projects() {
   return (
