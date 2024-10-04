@@ -20,25 +20,11 @@ collections:
         widget: list
         summary: '{{title}}'
         fields:
-          - label: Brouillon
-            name: draft
-            widget: boolean
-            default: false
-          - label: Titre
-            name: title
-            widget: string
-          - label: Description
-            name: description
-            widget: text
-          - label: Lien
-            name: link
-            widget: string
-          - label: Lien git
-            name: linkGit
-            widget: string
-          - label: Image
-            name: image
-            widget: image
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Description', name: 'description', widget: 'text' }
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'GitHub Link', name: 'linkGit', widget: 'string' }
+          - { label: 'Project Link', name: 'link', widget: 'string' }
 
   - name: Tools
     label: Outils
