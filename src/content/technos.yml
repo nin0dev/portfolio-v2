@@ -1,9 +1,0 @@
-technologies:
-  - name: 'Next.js'
-    image: '/images/nextjs-logo.png'
-  - name: 'Tailwind CSS'
-    image: '/images/tailwind-logo.png'
-  - name: 'Storyblok'
-    image: '/images/storyblok.svg'
-  - name: 'WordPress'
-    image: '/images/wordpress-logo.png'
