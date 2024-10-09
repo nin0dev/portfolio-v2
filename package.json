@@ -6,8 +6,7 @@
     "dev": "next dev & npm run cms",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "cms": "npx netlify-cms-proxy-server"
+    "lint": "next lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",

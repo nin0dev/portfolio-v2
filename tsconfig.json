@@ -31,7 +31,7 @@
     ".next/types/**/*.ts",
     "pages/_document.js",
     "public/admin/admin.jsx",
-    "src/components/projects.jsx"
+    "src/components/projects.tsx"
   ],
   "exclude": ["node_modules"]
 }

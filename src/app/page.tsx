@@ -1,6 +1,3 @@
-import { createClient } from '@/../lib/contento';
-import { notFound } from 'next/navigation';
-
 import About from '@/components/about';
 import Footer from '@/components/footer';
 import Projects from '@/components/projects';
@@ -8,14 +5,7 @@ import Tools from '@/components/tools';
 import Link from 'next/link';
 import '../styles/globals.css';
 
-export default async function Home() {
-  const content = await createClient()
-    .getContentBySlug('home', 'general_page')
-    .catch(() => {
-      notFound();
-    });
-
-  console.log(content);
+export default function Home() {
   return (
     <>
       <title>Nino Berber — Portfolio</title>
@@ -89,7 +79,19 @@ I am a Web enthusiast, specializing in development. Check out my projects and co
           </h3>
           <br />
         </div>
-        <Projects />
+        <Projects
+          block={{
+            name: '',
+            sort: 0,
+            fields: [],
+            content_type: {
+              id: '',
+              name: '',
+              handle: '',
+              object_type: '',
+            },
+          }}
+        />
         <Tools />
         <About />
         <Footer />
