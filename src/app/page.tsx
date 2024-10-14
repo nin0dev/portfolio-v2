@@ -12,12 +12,6 @@ export default function Home() {
     <>
       <title>Nino Berber — Portfolio</title>
 
-      {/* Google Search Console verification */}
-      <meta
-        name="google-site-verification"
-        content="bzVBtsBADpzJb8Tl9M8U5Cnusa_SuCRwqh3YqG9wOIc"
-      />
-
       <meta charSet="utf-8" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -71,15 +65,7 @@ I am a Web enthusiast, specializing in development. Check out my projects and co
       <meta name="apple-mobile-web-app-title" content="Portfolio" />
       <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
       <meta name="theme-color" content="#ffffff" />
-      {/* Start of HubSpot Embed Code */}
-      <script
-        type="text/javascript"
-        id="hs-script-loader"
-        async
-        defer
-        src="//js-eu1.hs-scripts.com/145595772.js"
-      ></script>
-      {/* End of HubSpot Embed Code */}
+
       <main>
         <div className="mb-20">
           <h2 className="text-3xl">Hello 👋</h2>
