@@ -3,17 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev & npm run cms",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "cms": "npx netlify-cms-proxy-server"
+    "lint": "next lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "gray-matter": "^4.0.3",
+    "@gocontento/client": "^0.0.11",
+    "@gocontento/next": "^0.0.14",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0"
