@@ -4,10 +4,9 @@ import About from '@/components/about';
 import Footer from '@/components/footer';
 import Projects from '@/components/projects';
 import Tools from '@/components/tools';
-import Link from 'next/link';
 import '../styles/globals.css';
 
-export default function Home({ posts }) {
+export default function Home() {
   return (
     <>
       <title>Nino Berber — Portfolio</title>
@@ -71,15 +70,7 @@ I am a Web enthusiast, specializing in development. Check out my projects and co
       <meta name="apple-mobile-web-app-title" content="Portfolio" />
       <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
       <meta name="theme-color" content="#ffffff" />
-      {/* Start of HubSpot Embed Code */}
-      <script
-        type="text/javascript"
-        id="hs-script-loader"
-        async
-        defer
-        src="//js-eu1.hs-scripts.com/145595772.js"
-      ></script>
-      {/* End of HubSpot Embed Code */}
+
       <main>
         <div className="mb-20">
           <h2 className="text-3xl">Hello 👋</h2>
