@@ -6,7 +6,7 @@ import Projects from '@/components/projects';
 import Tools from '@/components/tools';
 import '../styles/globals.css';
 
-export default function Home() {
+export default function Home({ posts }) {
   return (
     <>
       <title>Nino Berber — Portfolio</title>
