@@ -1,12 +1,10 @@
 'use client';
 import React from 'react';
-import { useState } from 'react';
 
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Header() {
-  const [open, setOpen] = useState(false);
 
   return (
     <nav className="bg-[hsla(0,100%,100%,.9)] backdrop-blur-sm	border-y border-[#eaeaea] bottom-0 right-0 left-0 flex fixed justify-between py-5 px-5 z-50 lg:justify-between">
