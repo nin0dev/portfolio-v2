@@ -1,12 +1,11 @@
-'use client';
-
 import About from '@/components/about';
 import Footer from '@/components/footer';
 import Projects from '@/components/projects';
 import Tools from '@/components/tools';
 import '../styles/globals.css';
 
-export default function Home({ posts }) {
+export default async function Home({ posts }) {
+
   return (
     <>
       <title>Nino Berber — Portfolio</title>

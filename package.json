@@ -6,19 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "slicemachine": "start-slicemachine"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@gocontento/client": "^0.0.11",
-    "@gocontento/next": "^0.0.14",
+    "@prismicio/client": "^7.13.1",
+    "@prismicio/next": "^1.7.1",
+    "@prismicio/react": "^2.9.1",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@slicemachine/adapter-next": "^0.3.61",
     "@types/js-yaml": "^4.0.6",
     "@types/node": "20.6.0",
     "@types/react": "18.2.21",
@@ -29,6 +32,7 @@
     "eslint-config-next": "13.4.19",
     "next-plugin-yaml": "^1.0.1",
     "postcss": "8.4.29",
+    "slice-machine-ui": "^2.11.1",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
   },
