@@ -4,7 +4,7 @@ const projects = [
   {
     title: "Password Generator",
     description: "Tiny project to get a good understanding of Javascript's logic.",
-    image: "/uploads/passgen_thumb.png",
+    image: "/images/passgen_thumb.png",
     altText: "Password Generator project thumbnail",
     github: "https://github.com/nin0dev/pass-generator",
     link: "https://nin0dev.github.io/pass-generator/",
@@ -20,7 +20,7 @@ export default function Projects() {
           <div className="h-auto" key={index}>
             <div className="p-5 relative shadow-lg rounded overflow-hidden hover:scale-105 transition-transform h-full">
               <Image
-                src={project.image || "/uploads/placeholder.svg"}
+                src={project.image || "/images/placeholder.svg"}
                 priority
                 width={500}
                 height={50}
