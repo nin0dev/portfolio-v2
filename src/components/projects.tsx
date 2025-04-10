@@ -1,43 +1,59 @@
 import Image from 'next/image';
 
-export default function Projects({ imageLink, altText, title, description, githubLink, projectLink }) {
-  
+const projects = [
+  {
+    title: "Password Generator",
+    description: "Tiny project to get a good understanding of Javascript's logic.",
+    image: "/../../uploads/passgen_thumb.png",
+    altText: "Password Generator project thumbnail",
+    github: "https://github.com/nin0dev/pass-generator",
+    link: "https://nin0dev.github.io/pass-generator/",
+  }
+];
+
+export default function Projects() {
   return (
     <section className="mb-10" id="projects">
       <h3 className="text-2xl mb-5">Projects</h3>
       <div className="mt-5 grid grid-cols-1 grid-rows-1 sm:grid-cols-2 gap-5 lg:grid-cols-3 2xl:grid-cols-4">
-          <div className="h-auto">
+        {projects.map((project, index) => (
+          <div className="h-auto" key={index}>
             <div className="p-5 relative shadow-lg rounded overflow-hidden hover:scale-105 transition-transform h-full">
               <Image
-                src={imageLink}
+                src={project.image || "/../../uploads/placeholder.svg"}
                 priority
                 width={500}
                 height={50}
-                alt={altText}
+                alt={project.altText || "Project thumbnail"}
                 className="mb-5 rounded h-[200px] object-cover"
               />
-              <h4 className="text-xl mb-2">{title}</h4>
+              <h4 className="text-xl mb-2">{project.title}</h4>
               <p className="text-xs overflow-ellipsis overflow-hidden line-clamp-3">
-              {description}
+              {project.description}
               </p>
               <div className="pt-5">
+              {project.github ?
                 <a
-                  href={githubLink}
+                  href={project.github}
                   target="_blank"
                   className="text-sm mb-2 whitespace-nowrap hover:underline"
                 >
                   Check on Github
                 </a>
+              : null}
+              {project.link ?
                 <a
-                  href={projectLink}
+                  href={project.link}
                   target="_blank"
                   className="text-sm ml-5 whitespace-nowrap hover:underline"
                 >
                   Check project
                 </a>
+              : null}
               </div>
             </div>
           </div>
+        ))}
       </div>
     </section>
   );
