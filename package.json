@@ -17,7 +17,6 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@slicemachine/adapter-next": "^0.3.62",
     "@types/js-yaml": "^4.0.6",
     "@types/node": "20.6.0",
     "@types/react": "18.2.21",
