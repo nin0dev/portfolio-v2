@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Projects() {
+export default function Projects({ imageLink, altText, title, description, githubLink, projectLink }) {
   
   return (
     <section className="mb-10" id="projects">
@@ -9,27 +9,27 @@ export default function Projects() {
           <div className="h-auto">
             <div className="p-5 relative shadow-lg rounded overflow-hidden hover:scale-105 transition-transform h-full">
               <Image
-                src={""}
+                src={imageLink}
                 priority
                 width={500}
                 height={50}
-                alt={""}
+                alt={altText}
                 className="mb-5 rounded h-[200px] object-cover"
               />
-              <h4 className="text-xl mb-2">{}</h4>
+              <h4 className="text-xl mb-2">{title}</h4>
               <p className="text-xs overflow-ellipsis overflow-hidden line-clamp-3">
-              {}
+              {description}
               </p>
               <div className="pt-5">
                 <a
-                  href={""}
+                  href={githubLink}
                   target="_blank"
                   className="text-sm mb-2 whitespace-nowrap hover:underline"
                 >
                   Check on Github
                 </a>
                 <a
-                  href={""}
+                  href={projectLink}
                   target="_blank"
                   className="text-sm ml-5 whitespace-nowrap hover:underline"
                 >

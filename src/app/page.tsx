@@ -79,7 +79,8 @@ I am a Web enthusiast, specializing in development. Check out my projects and co
           </h3>
           <br />
         </div>
-        <Projects />
+        <Projects imageLink={"/public/uploads/passgen_thumb.png"}  altText={"Password Generator project thumbnail"} title={"Password Generator"} description={"Tiny project to get a good understanding of Javascript's logic."} githubLink={"https://github.com/nin0dev/pass-generator"}projectLink={"https://nin0dev.github.io/pass-generator/"}
+        />
         <Tools />
         <About />
         <Footer />
