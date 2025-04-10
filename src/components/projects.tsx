@@ -1,12 +1,5 @@
 import Image from 'next/image';
 
-import { asText, asLink } from '@prismicio/helpers';
-import { createClient } from '@/prismicio';
-import { PrismicNextImage } from "@prismicio/next";
-import { PrismicLink, PrismicText } from "@prismicio/react";
-import { RichText } from "./RichText";
-import { Content } from "@prismicio/client";
-
 export default function Projects() {
   
   return (

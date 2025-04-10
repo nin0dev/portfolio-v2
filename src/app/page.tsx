@@ -4,11 +4,7 @@ import Projects from '@/components/projects';
 import Tools from '@/components/tools';
 import '../styles/globals.css';
 
-import Prismic from "prismic-javascript";
-import { RichText } from "prismic-reactjs";
-import { Client } from "../../prismic-configuration";
-
-export default async function Home({ posts }) {
+export default async function Home() {
 
   return (
     <>
@@ -79,8 +75,7 @@ I am a Web enthusiast, specializing in development. Check out my projects and co
           <h2 className="text-3xl">Hello 👋</h2>
           <br />
           <h3 className="text-xl">
-            French & Canadian based in Versailles, France. <br /> I am a Web
-            enthusiast, specializing in development.
+            French & Canadian Web enthusiast, specializing in front-end development.
           </h3>
           <br />
         </div>
@@ -91,22 +86,4 @@ I am a Web enthusiast, specializing in development. Check out my projects and co
       </main>
     </>
   );
-}
-
-// This function is called everytime a request/refresh is made
-
-export async function getServerSideProps() {
-  const articles = await Client().query(
-    Prismic.Predicates.at("document.type", "article")
-  );
-  const trending = await Client().query(
-    Prismic.Predicates.at("document.type", "trending")
-  );
-
-  return {
-    props: {
-      articles: articles,
-      trending: trending,
-    },
-  };
 }
