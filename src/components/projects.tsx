@@ -20,7 +20,7 @@ export default function Projects() {
           <div className="h-auto" key={index}>
             <div className="p-5 relative shadow-lg rounded overflow-hidden hover:scale-105 transition-transform h-full">
               <Image
-                src={project.image || "/images/placeholder.svg"}
+                src={project.image}
                 priority
                 width={500}
                 height={50}
