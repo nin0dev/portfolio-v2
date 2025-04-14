@@ -4,7 +4,7 @@ const projects = [
   {
     title: "Password Generator",
     description: "Tiny project to get a good understanding of Javascript's logic.",
-    image: "/public/images/passgen_thumb.png",
+    image: "/images/passgen_thumb.png",
     altText: "Password Generator project thumbnail",
     github: "https://github.com/nin0dev/pass-generator",
     link: "https://nin0dev.github.io/pass-generator/",
