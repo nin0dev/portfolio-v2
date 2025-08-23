@@ -4,6 +4,11 @@ import Projects from '@/components/projects';
 import Tools from '@/components/tools';
 import '../styles/globals.css';
 
+// Material UI imports
+import Box from '@mui/material/Box';
+import Fab from '@mui/material/Fab';
+
+
 export default async function Home() {
 
   return (

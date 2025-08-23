@@ -1,6 +1,4 @@
 import * as React from 'react';
-
-import Image from 'next/image';
 import Link from 'next/link';
 
 import Card from '@mui/material/Card';
@@ -45,14 +43,12 @@ export default function Projects() {
         {projects.map((project, index) => (
           <Card className="hover:scale-105" key={index}>
             <CardActionArea>
-              <Link href={project.link} target="_blank">
-                <CardMedia
-                  component="img"
-                  image={project.image}
-                  alt={project.altText || "Project thumbnail"}
-                  className="object-cover"
-                />
-              </Link>
+              <CardMedia
+                component="img"
+                image={project.image}
+                alt={project.altText || "Project thumbnail"}
+                className="object-cover"
+              />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
                   {project.title}
@@ -61,7 +57,8 @@ export default function Projects() {
                   {project.description}
                 </Typography>
               </CardContent>
-              <CardActions>
+            </CardActionArea>  
+            <CardActions>
               {project.github ?
                 <Button size="small" href={project.github}>Github</Button>
               : <Button disabled>Github</Button>}
@@ -69,7 +66,6 @@ export default function Projects() {
                 <Button size="small" target="_blank" href={project.link}>Project</Button>
               : <Button disabled>Project</Button>}
               </CardActions>
-            </CardActionArea>  
           </Card>
         ))}
       </div>
