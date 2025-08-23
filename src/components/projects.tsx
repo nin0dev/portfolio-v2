@@ -11,6 +11,13 @@ const projects = [
     link: "https://crm-reflexprod.vercel.app/",
   },
   {
+    title: "Appétencia Website",
+    description: "WordPress website built with Elementor.",
+    image: "/images/appetencia_thumb.png",
+    altText: "Appétencia project thumbnail",
+    link: "https://appetencia.com/",
+  },
+  {
     title: "Password Generator",
     description: "Tiny project to get a good understanding of Javascript's logic.",
     image: "/images/passgen_thumb.png",
