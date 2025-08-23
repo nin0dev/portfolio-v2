@@ -1,5 +1,15 @@
+import * as React from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
+
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import CardActionArea from '@mui/material/CardActionArea';
 
 const projects = [
   {
@@ -12,7 +22,7 @@ const projects = [
   },
   {
     title: "Appétencia Website",
-    description: "WordPress website built with Elementor.",
+    description: "WordPress website built with Elementor, respecting Figma design prototypes that I made.",
     image: "/images/appetencia_thumb.png",
     altText: "Appétencia project thumbnail",
     link: "https://appetencia.com/",
@@ -33,44 +43,34 @@ export default function Projects() {
       <h3 className="text-2xl mb-5">Projects</h3>
       <div className="mt-5 grid grid-cols-1 grid-rows-1 sm:grid-cols-2 gap-5 lg:grid-cols-3 2xl:grid-cols-4">
         {projects.map((project, index) => (
-          <div className="h-auto" key={index}>
-            <div className="p-5 relative shadow-lg rounded overflow-hidden hover:scale-105 transition-transform h-full">
+          <Card className="hover:scale-105" key={index}>
+            <CardActionArea>
               <Link href={project.link} target="_blank">
-                <Image
-                  src={project.image}
-                  priority
-                  width={500}
-                  height={50}
+                <CardMedia
+                  component="img"
+                  image={project.image}
                   alt={project.altText || "Project thumbnail"}
-                  className="mb-5 rounded h-[200px] object-cover"
+                  className="object-cover"
                 />
               </Link>
-              <Link href={project.link} target="_blank"><h4 className="text-xl mb-2">{project.title}</h4></Link>
-              <Link href={project.link} target="_blank"><p className="text-xs overflow-ellipsis overflow-hidden line-clamp-3">
-              {project.description}
-              </p></Link>
-              <div className="pt-5">
-                {project.github ?
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    className="text-sm mb-2 whitespace-nowrap hover:underline"
-                  >
-                    Check on Github
-                  </a>
-                : null}
-                {project.link ?
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    className="text-sm ml-5 whitespace-nowrap hover:underline"
-                  >
-                    Check project
-                  </a>
-                : null}
-              </div>
-            </div>
-          </div>
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  {project.title}
+                </Typography>
+                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                  {project.description}
+                </Typography>
+              </CardContent>
+              <CardActions>
+              {project.github ?
+                <Button size="small" href={project.github}>Github</Button>
+              : <Button disabled>Github</Button>}
+              {project.link ?
+                <Button size="small" target="_blank" href={project.link}>Project</Button>
+              : <Button disabled>Project</Button>}
+              </CardActions>
+            </CardActionArea>  
+          </Card>
         ))}
       </div>
     </section>
