@@ -4,6 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+import MailIcon from '@mui/icons-material/Mail';
+
 export default function Header() {
 
   return (
@@ -18,10 +20,14 @@ export default function Header() {
         />
       </Link>
       <ul className="flex items-center">
-        <li>
+        <li className='pr-4'>
+          <Link href="mailto:ninberber@gmail.com">
+            <MailIcon />
+          </Link>
+        </li>
+        <li className="pr-4">
           <Link href="https://www.github.com/nin0dev">
             <svg
-              className="pr-4"
               xmlns="http://www.w3.org/2000/svg"
               height="1.2em"
               viewBox="0 0 496 512"
@@ -30,10 +36,9 @@ export default function Header() {
             </svg>
           </Link>
         </li>
-        <li>
+        <li className="pr-4">
           <Link href="https://www.linkedin.com/in/nino-berber">
             <svg
-              className="pr-4"
               xmlns="http://www.w3.org/2000/svg"
               height="1.2em"
               viewBox="0 0 448 512"
