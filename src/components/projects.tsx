@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Link from 'next/link';
 
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
@@ -12,7 +11,7 @@ import CardActionArea from '@mui/material/CardActionArea';
 const projects = [
   {
     title: "CRM ReflexProd",
-    description: "Built from scratch CRM using Next.js, Supabase, Nodemailer, TailwindCSS & more...",
+    description: "Built-from-scratch CRM using Next.js, Supabase, Nodemailer, TailwindCSS & more...",
     image: "/images/crm_thumb.png",
     altText: "ReflexProd CRM project thumbnail",
     github: "https://github.com/nin0dev/crm-reflexprod",
@@ -42,7 +41,7 @@ export default function Projects() {
       <div className="mt-5 grid grid-cols-1 grid-rows-1 sm:grid-cols-2 gap-5 lg:grid-cols-3 2xl:grid-cols-4">
         {projects.map((project, index) => (
           <Card className="hover:scale-105" key={index}>
-            <CardActionArea>
+            <CardActionArea href={project.link}>
               <CardMedia
                 component="img"
                 image={project.image}
@@ -50,7 +49,7 @@ export default function Projects() {
                 className="object-cover"
               />
               <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography variant="h5" component="div">
                   {project.title}
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
