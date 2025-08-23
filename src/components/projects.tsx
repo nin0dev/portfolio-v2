@@ -3,6 +3,14 @@ import Link from 'next/link';
 
 const projects = [
   {
+    title: "CRM ReflexProd",
+    description: "Built from scratch CRM using Next.js, Supabase, Nodemailer, TailwindCSS & more...",
+    image: "/images/crm_thumb.png",
+    altText: "ReflexProd CRM project thumbnail",
+    github: "https://github.com/nin0dev/crm-reflexprod",
+    link: "https://crm-reflexprod.vercel.app/",
+  },
+  {
     title: "Password Generator",
     description: "Tiny project to get a good understanding of Javascript's logic.",
     image: "/images/passgen_thumb.png",
