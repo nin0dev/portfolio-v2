@@ -21,12 +21,12 @@ export default function Header() {
       </Link>
       <ul className="flex items-center">
         <li className='pr-4'>
-          <Link href="mailto:ninberber@gmail.com">
+          <Link aria-label="Contact me by email!" href="mailto:ninberber@gmail.com">
             <MailIcon />
           </Link>
         </li>
         <li className="pr-4">
-          <Link href="https://www.github.com/nin0dev">
+          <Link aria-label="Check my Github profile!" href="https://www.github.com/nin0dev">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="1.2em"
@@ -37,7 +37,7 @@ export default function Header() {
           </Link>
         </li>
         <li className="pr-4">
-          <Link href="https://www.linkedin.com/in/nino-berber">
+          <Link aria-label="Check my Linkedin profile!" href="https://www.linkedin.com/in/nino-berber">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="1.2em"
