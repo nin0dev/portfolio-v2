@@ -1,5 +1,7 @@
 import * as React from 'react';
+import { client } from '@/lib/contentful';
 
+import Image from 'next/image';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
@@ -8,61 +10,60 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import CardActionArea from '@mui/material/CardActionArea';
 
-const projects = [
-  {
-    title: "CRM ReflexProd",
-    description: "Built-from-scratch CRM using Next.js, Supabase, Nodemailer, TailwindCSS & more...",
-    image: "/images/crm_thumb.png",
-    altText: "ReflexProd CRM project thumbnail",
-    github: "https://github.com/nin0dev/crm-reflexprod",
-    link: "https://crm-reflexprod.vercel.app/",
-  },
-  {
-    title: "Appétencia Website",
-    description: "WordPress website built with Elementor, respecting Figma design prototypes that I made.",
-    image: "/images/appetencia_thumb.png",
-    altText: "Appétencia project thumbnail",
-    link: "https://appetencia.com/",
-  },
-  {
-    title: "Password Generator",
-    description: "Tiny project to get a good understanding of Javascript's logic.",
-    image: "/images/passgen_thumb.png",
-    altText: "Password Generator project thumbnail",
-    github: "https://github.com/nin0dev/pass-generator",
-    link: "https://nin0dev.github.io/pass-generator/",
-  }
-];
+export default async function Projects() {
+  const responseProject = await client.getEntries({ content_type: 'project' });
+  const responseTool = await client.getEntries({ content_type: 'tool' });
 
-export default function Projects() {
   return (
     <section className="mb-10" id="projects">
       <h3 className="text-2xl mb-5">Projects</h3>
       <div className="mt-5 grid grid-cols-1 grid-rows-1 sm:grid-cols-2 gap-5 lg:grid-cols-3 2xl:grid-cols-4">
-        {projects.map((project, index) => (
-          <Card className="hover:scale-105" key={index}>
-            <CardActionArea href={project.link}>
+        {responseProject.items.map((item: any) => (
+          <Card className="hover:scale-105" key={item.sys.id}>
+            <CardActionArea href={item.fields.projectLink}>
               <CardMedia
                 component="img"
-                image={project.image}
-                alt={project.altText || "Project thumbnail"}
+                image={`https:${item.fields.image.fields.file.url}`}
+                alt={item.fields.altText || 'Project thumbnail'}
                 className="object-cover"
               />
               <CardContent>
                 <Typography variant="h5" component="div">
-                  {project.title}
+                  {item.fields.title}
                 </Typography>
                 <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                  {project.description}
+                  {item.fields.description}
                 </Typography>
+
+                {/* Display tools per project */}
+                {item.fields.tools && (
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {item.fields.tools.map((tool: any) => (
+                      <div
+                        key={tool.sys.id}
+                        className="bg-slate-200 rounded-md px-2 py-1 flex items-center gap-1 text-xs"
+                      >
+                        {tool.fields.icon && (
+                          <Image
+                            src={`https:${tool.fields.icon.fields.file.url}`}
+                            alt={tool.fields.name}
+                            width={16}
+                            height={16}
+                          />
+                        )}
+                        {tool.fields.name}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </CardContent>
             </CardActionArea>  
             <CardActions>
-              {project.github ?
-                <Button size="small" href={project.github}>Github</Button>
+              {item.fields.githubLink ?
+                <Button size="small" href={item.fields.githubLink}>Github</Button>
               : <Button disabled>Github</Button>}
-              {project.link ?
-                <Button size="small" target="_blank" href={project.link}>Project</Button>
+              {item.fields.projectLink ?
+                <Button size="small" target="_blank" href={item.fields.projectLink}>Project</Button>
               : <Button disabled>Project</Button>}
               </CardActions>
           </Card>
