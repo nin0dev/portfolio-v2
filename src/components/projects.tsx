@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { client } from '@/lib/contentful';
+import { getEntries } from '@/lib/getContentfulEntries';
 
 import Image from 'next/image';
 import Card from '@mui/material/Card';
@@ -11,14 +11,13 @@ import Button from '@mui/material/Button';
 import CardActionArea from '@mui/material/CardActionArea';
 
 export default async function Projects() {
-  const responseProject = await client.getEntries({ content_type: 'project' });
-  const responseTool = await client.getEntries({ content_type: 'tool' });
+  const responseProject = await getEntries('project');
 
   return (
     <section className="mb-10" id="projects">
       <h3 className="text-2xl mb-5">Projects</h3>
       <div className="mt-5 grid grid-cols-1 grid-rows-1 sm:grid-cols-2 gap-5 lg:grid-cols-3 2xl:grid-cols-4">
-        {responseProject.items.map((item: any) => (
+        {responseProject.map((item: any) => (
           <Card className="hover:scale-105" key={item.sys.id}>
             <CardActionArea href={item.fields.projectLink}>
               <CardMedia
@@ -35,7 +34,7 @@ export default async function Projects() {
                   {item.fields.description}
                 </Typography>
 
-                {/* Display tools per project */}
+                {/* Display tools if available */}
                 {item.fields.tools && (
                   <div className="flex flex-wrap gap-2 mt-3">
                     {item.fields.tools.map((tool: any) => (
