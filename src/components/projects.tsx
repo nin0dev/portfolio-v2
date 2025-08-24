@@ -11,13 +11,13 @@ import Button from '@mui/material/Button';
 import CardActionArea from '@mui/material/CardActionArea';
 
 export default async function Projects() {
-  const responseProject = await getEntries('project');
+  const response = await getEntries('project');
 
   return (
     <section className="mb-10" id="projects">
       <h3 className="text-2xl mb-5">Projects</h3>
       <div className="mt-5 grid grid-cols-1 grid-rows-1 sm:grid-cols-2 gap-5 lg:grid-cols-3 2xl:grid-cols-4">
-      {responseProject.map((item: any) => (
+      {response.map((item: any) => (
           <Card className="hover:scale-105" key={item.sys.id}>
             <CardActionArea href={item.fields.projectLink}>
               <CardMedia
