@@ -13,7 +13,7 @@ export default async function About() {
         {response.map((item: any) => (
           <div key={item.sys.id} className="md:flex gap-6">
             <Image
-              className="rounded h-auto w-1/2 mb-4 md:w-1/3 md:max-w-[250px]"
+              className="rounded h-auto w-1/2 mb-4 md:max-w-[250px]"
               src={`https:${item.fields.profilePicture.fields.file.url}`}
               alt="Profile picture"
               width={500}
