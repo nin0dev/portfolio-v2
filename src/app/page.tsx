@@ -74,7 +74,7 @@ I am a Web enthusiast, specializing in development. Check out my projects and co
           <h2 className="text-3xl">Hello 👋</h2>
           <br />
           <h3 className="text-xl">
-            French & Canadian Web enthusiast, specializing in front-end development.
+            French & Canadian Web enthusiast, specializing in JavaScript development.
           </h3>
           <br />
         </div>
