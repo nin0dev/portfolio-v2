@@ -32,6 +32,6 @@
     "pages/_document.js",
     "public/admin/admin.jsx",
     "src/components/projects.tsx"
-  ],
+, "src/app/providers.jsx"  ],
   "exclude": ["node_modules"]
 }

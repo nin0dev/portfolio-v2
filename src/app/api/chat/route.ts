@@ -10,7 +10,6 @@ export async function POST(req: Request) {
     // Check key
     const apiKey = process.env.MISTRAL_API_KEY;
     if (!apiKey) {
-      console.error("Missing MISTRAL_API_KEY");
       return NextResponse.json({ reply: "⚠️ Server misconfiguration" }, { status: 500 });
     }
 
@@ -34,7 +33,6 @@ export async function POST(req: Request) {
 
     if (!resp.ok) {
       const errText = await resp.text();
-      console.error("Mistral API error:", resp.status, errText);
       return NextResponse.json({ reply: "⚠️ Mistral API error" }, { status: 500 });
     }
 
@@ -42,13 +40,11 @@ export async function POST(req: Request) {
     const reply = data.choices?.[0]?.message?.content;
 
     if (!reply) {
-      console.error("Mistral returned empty reply:", data);
       return NextResponse.json({ reply: "⚠️ No reply from AI" }, { status: 500 });
     }
 
     return NextResponse.json({ reply });
   } catch (err) {
-    console.error("Call error in route:", err);
     return NextResponse.json({ reply: "⚠️ Internal error" }, { status: 500 });
   }
 }

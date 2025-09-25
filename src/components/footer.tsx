@@ -16,6 +16,7 @@ export default function Footer() {
       <p className="text-md underline">
         <Link href="/legal-mentions">Legal Mentions</Link>
       </p>
+      <p className="mt-2 text-xs italic">Privacy: This site uses privacy-friendly analytics (PostHog) — no cookies, no personal data collected.</p>
     </footer>
   );
 }
