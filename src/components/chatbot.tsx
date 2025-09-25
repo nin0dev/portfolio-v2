@@ -54,9 +54,7 @@ export default function Chatbot() {
         "name" in err &&
         (err as any).name === "AbortError"
       ) {
-        console.log("Fetch aborted");
       } else {
-        console.error(err);
         setMessages((m) => [
           ...m,
           { role: "assistant", content: "⚠️ Network error" },
