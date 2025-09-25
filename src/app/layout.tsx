@@ -2,6 +2,7 @@ import Header from '@/components/header';
 import React from 'react';
 
 import { Sora } from 'next/font/google';
+import Chatbot from '@/components/chatbot';
 
 const sora = Sora({
   subsets: ['latin'],
@@ -19,6 +20,7 @@ export default function RootLayout({
         className={`mb-20 pt-8 mx-5 lg:px-40 bg-white ${sora.className} text-black`}
       >
         {children}
+        <Chatbot />
         <Header />
       </body>
     </html>
