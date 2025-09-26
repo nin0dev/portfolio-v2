@@ -6,7 +6,7 @@ import CloseIcon from "@mui/icons-material/Close";
 export default function Chatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { role: "assistant", content: "Hi! I'm Nino's Agent." },
+    { role: "assistant", content: "Hi! I'm Nino's AI Agent. You can ask me questions about him." },
   ]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
